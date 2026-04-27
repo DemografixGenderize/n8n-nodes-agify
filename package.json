@@ -1,6 +1,6 @@
 {
   "name": "@demografix/n8n-nodes-agify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n community node for Agify.io API - predict age based on first names using statistical analysis",
   "license": "MIT",
   "homepage": "https://github.com/DemografixGenderize/n8n-nodes-agify#readme",
