@@ -8,14 +8,14 @@ export class DemografixAgify implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Get age prediction for a given name using the Agify.io API (100 free requests/day without API key, more with subscription)',
+		description: 'Get age prediction for a given name using the Agify.io API (free tier: 2,500 requests/month)',
 		defaults: {
 			name: 'Agify',
 		},
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: 'demografixAgifyApi', required: false }],
+		credentials: [{ name: 'demografixAgifyApi', required: true }],
 		requestDefaults: {
 			baseURL: 'https://api.agify.io',
 			headers: {
@@ -60,12 +60,12 @@ export class DemografixAgify implements INodeType {
 				default: 'getAge',
 			},
 			{
-				displayName: 'First Name',
+				displayName: 'Name',
 				name: 'name',
 				type: 'string',
 				default: '',
 				required: true,
-				description: 'The first name to get age prediction for',
+				description: 'The name to get age prediction for',
 				placeholder: 'e.g., Peter',
 			},
 			{

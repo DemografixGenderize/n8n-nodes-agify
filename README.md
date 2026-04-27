@@ -2,7 +2,7 @@
 
 This is an n8n community node. It lets you use Agify.io in your n8n workflows.
 
-Agify.io is an age prediction API that infers age based on first names using statistical analysis.
+Agify.io is an age prediction API that infers age based on names using statistical analysis.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
@@ -19,24 +19,23 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-- **Get Age**: Predict the age for a given first name based on statistical analysis
+- **Get Age**: Predict the age for a given name based on statistical analysis
 
 ## Credentials
 
-### Free Tier (No Authentication Required)
-You can start using this node immediately without any credentials. The free tier provides:
-- **100 requests per day** per IP address
-- No signup required
-- No API key needed
+An API key is required for all Agify.io requests.
 
-### Paid Tier (API Key Required)
-For higher request volumes, you can subscribe to a paid plan at [agify.io](https://agify.io) with various tier options for increased rate limits.
+### Free tier — 2,500 requests/month
+Sign up at [agify.io](https://agify.io) for a free account. Free accounts include 2,500 requests per month at no cost.
 
-**Setting up credentials:**
+### Paid tiers
+For higher volumes, subscribe to a paid plan at [agify.io](https://agify.io) — tiers cover increased monthly request quotas.
+
+### Setup
 1. Sign up at [agify.io](https://agify.io)
-2. Subscribe to a paid plan to receive your API key
+2. Copy your API key from the dashboard
 3. In n8n, create new "Agify API" credentials
-4. Enter your API key
+4. Paste the API key
 5. Test the credentials to verify they work
 
 ## Compatibility
@@ -47,7 +46,7 @@ This node is built using n8n's declarative style and requires n8n version 1.0 or
 
 ### Basic Example
 1. Add the "Agify" node to your workflow
-2. Enter a first name (e.g., "Peter", "Sarah", "Alex")
+2. Enter a name (e.g., "Peter", "Sarah", "Alex")
 3. Execute the node
 
 ### Response Data
